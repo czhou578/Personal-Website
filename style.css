@@ -1,0 +1,56 @@
+body {
+  background-color: #1F0638;
+  counter-reset: item;
+}
+
+:root {
+  --green: #64ffda;
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+  margin: 35px;
+}
+
+li > a::before {
+  counter-increment: item;
+  content: "0" counter(item) ". ";
+
+}
+
+ul {
+  position: absolute;
+  left: 55%;
+  top: 25px;
+  padding-left: 35px;
+}
+
+li > a {
+  color: #ccd6f6 !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+li > a:hover {
+  color: lightskyblue !important;
+}
+
+object {
+  height: 75px;
+  width: 75px;
+}
+
+.resume-button {
+  position: absolute;
+  left: 90%;
+  top: 15px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--green);
+}
+
+.resume-button > a {
+  color: var(--green);
+}
