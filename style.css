@@ -3,8 +3,20 @@ body {
   counter-reset: item;
 }
 
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
 :root {
   --green: #64ffda;
+  --sky-blue: #95d1e0;
+  --slate: #8892b0;
+  --lightest-slate: #ccd6f6;
+  --coral:#f08080;
+  --fz-sm: 20px;
+  --fz-lg: 18px;
+  --border-radius: 4px;
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
 li {
@@ -15,7 +27,8 @@ li {
 
 li > a::before {
   counter-increment: item;
-  content: "0" counter(item) ". ";
+  content: "0" counter(item) ".  ";
+  color: var(--coral);
 
 }
 
@@ -54,3 +67,106 @@ object {
 .resume-button > a {
   color: var(--green);
 }
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  max-height: 1000px;
+  padding: 100px 0px;
+  margin-top: -15%;
+}
+
+.paragraph-intro {
+  margin-left: 30%;
+  margin-top: 2%;
+
+}
+
+.paragraph-intro > h1 {
+  margin: 0px 0px 30px 4px;
+  font-family: var(--font-mono);
+  display: block;
+  font-size: var(--fz-sm);
+  font-weight: 400;
+  color: var(--sky-blue);
+
+}
+
+.paragraph-intro > h2 {
+  color: var(--sky-blue);
+  font-size: 80px;
+
+}
+
+.paragraph-intro > h3 {
+  font-size: 80px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.paragraph-intro > h3, p {
+  color: var(--slate);
+}
+
+.get-in-touch > a {
+  color: var(--coral);
+}
+
+.get-in-touch {
+  position: absolute;
+  left: 30.3%;
+  bottom: 25%;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid lightcoral;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-size: var(--fz-sm);
+
+}
+
+.profile {
+  margin-top: 10%;
+  margin-left: 29%;
+  width: 810px;
+  height: 743.5px;
+}
+
+.numbered-heading::before {
+  content: "01.";
+  margin-right: 14px;
+  color: var(--coral);
+}
+
+.numbered-heading {
+  color: var(--sky-blue);
+  font-size: 36px;
+}
+
+.numbered-heading::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 300px;
+  height: 1px;
+  margin-left: 50px;
+  background-color: #cad3e2;
+}
+
+.block-of-paragraphs {
+  width: 450px;
+  height: 450px;
+}
+
+.block-of-paragraphs > div {
+  margin-top: 40px;
+}
+/* h1, h2, h3, p {
+  color: beige;
+} */
