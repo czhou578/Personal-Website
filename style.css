@@ -19,7 +19,7 @@ body {
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
-li {
+.taskbar > li {
   display: inline;
   text-decoration: none;
   margin: 35px;
@@ -135,6 +135,7 @@ p {
   margin-left: 29%;
   width: 810px;
   height: 743.5px;
+  max-width: 900px;
 }
 
 .numbered-heading::before {
@@ -160,13 +161,88 @@ p {
 }
 
 .block-of-paragraphs {
-  width: 450px;
-  height: 450px;
+  display: inline-block;
+  /* width: 450px;
+  height: 450px; */
 }
 
 .block-of-paragraphs > div {
   margin-top: 40px;
+  padding-right: 200px;
 }
+
+.skills-list {
+  position: absolute;
+  top: 164%;
+  left: 28.5%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  margin-top: 12px;
+  list-style: none;
+
+}
+
+.inner {
+  display: inline-block;
+}
+
+.skills-list > li::before {
+  content: "▹";
+  color: var(--coral);
+  position: relative;
+  right: 15px;
+  line-height: 10px;
+  margin-bottom: 20px;
+}
+
+.skills-list > li {
+  color: var(--slate);
+  margin-top: 10px;
+}
+
+.cover {
+  position: absolute;
+  left: 60%;
+  bottom: -47%;
+}
+
+.cover > img {
+  height: 100%;
+  width: 100%;
+}
+
+.profile-pic {
+  display: inline-block;
+  max-width: 300px;
+}
+
+.cover::after {
+  content: "";
+  border: 2px solid var(--sky-blue);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+
+.work-experience {
+  position: absolute;
+  top: 195%;
+  left: 35%;
+  display: inline-block;
+}
+
+.inner > ul {
+  list-style: none;
+  z-index: 3;
+}
+
+.moving-btn {
+  background: transparent;
+}
+
 /* h1, h2, h3, p {
   color: beige;
 } */
