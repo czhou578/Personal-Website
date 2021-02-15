@@ -1,10 +1,18 @@
-body {
+
+html, body {
+  position: relative;
   background-color: #1F0638;
   counter-reset: item;
+  padding: 0;
+  margin: 0;
+}
+
+.start-1 {
+  position: relative;
 }
 
 *, ::before, ::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 :root {
@@ -18,6 +26,7 @@ body {
   --border-radius: 4px;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
+
 
 .taskbar > li {
   display: inline;
@@ -35,7 +44,7 @@ li > a::before {
 ul {
   position: absolute;
   left: 55%;
-  top: 25px;
+  top: 0.4%;
   padding-left: 35px;
 }
 
@@ -68,30 +77,34 @@ object {
   color: var(--green);
 }
 
-.intro-section {
+.intro {
+  position: relative;
+  height: 700px;
+  width: 700px;
+}
+
+.intro-section { /*this one*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh;
-  max-height: 1000px;
-  padding: 100px 0px;
-  margin-top: -15%;
+  position: relative;
+  margin-top: 100px;
 }
 
 .paragraph-intro {
   margin-left: 30%;
-  margin-top: 2%;
+  margin-top: 10px;
 
 }
 
 .paragraph-intro > h1 {
-  margin: 0px 0px 30px 4px;
   font-family: var(--font-mono);
   display: block;
   font-size: var(--fz-sm);
   font-weight: 400;
   color: var(--sky-blue);
+  max-width: 500px;
 
 }
 
@@ -102,6 +115,7 @@ object {
 }
 
 .paragraph-intro > h3 {
+  margin-block-start: 25px;
   font-size: 80px;
 }
 
@@ -118,9 +132,8 @@ p {
 }
 
 .get-in-touch {
-  position: absolute;
-  left: 30.3%;
-  bottom: 25%;
+  margin-top: 100px;
+  margin-left: 30%;
   padding: 1.25rem 1.75rem;
   border: 1px solid lightcoral;
   cursor: pointer;
@@ -130,12 +143,19 @@ p {
 
 }
 
+.profile-pic {
+  min-height: 250px;
+  min-width: 250px;
+
+}
+
 .profile {
-  margin-top: 10%;
-  margin-left: 29%;
-  width: 810px;
-  height: 743.5px;
-  max-width: 900px;
+  position: relative;
+  margin-top: 400px;
+  padding-top: 5%;
+  margin-left: 620px;
+  max-width: 1000px;
+  max-height: 1000px;
 }
 
 .numbered-heading::before {
@@ -145,6 +165,8 @@ p {
 }
 
 .numbered-heading {
+  position: relative;
+  top: 0;
   color: var(--sky-blue);
   font-size: 36px;
 }
@@ -161,9 +183,8 @@ p {
 }
 
 .block-of-paragraphs {
-  display: inline-block;
-  /* width: 450px;
-  height: 450px; */
+  position: relative;
+  min-width: fit-content;
 }
 
 .block-of-paragraphs > div {
@@ -171,19 +192,30 @@ p {
   padding-right: 200px;
 }
 
+.inner-paragraph-contain {
+  position: relative;
+}
+
+.list-wrap {
+  position: relative;
+  padding-top: 10px;
+  min-width: 300px;
+  min-height: 250px;
+}
+
 .skills-list {
   position: absolute;
-  top: 164%;
-  left: 28.5%;
+  margin-top: 20px;
+  left: 10px;
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
-  margin-top: 12px;
   list-style: none;
 
 }
 
 .inner {
-  display: inline-block;
+  position: relative;
+  padding: 15px;
 }
 
 .skills-list > li::before {
@@ -202,24 +234,28 @@ p {
 
 .cover {
   position: absolute;
-  left: 60%;
-  bottom: -47%;
+  margin-top: 25px;
+  padding-top: 35px;
 }
 
 .cover > img {
+  position: relative;
   height: 100%;
   width: 100%;
 }
 
 .profile-pic {
-  display: inline-block;
+  position: absolute;
+  top: 1%;
+  left: 80%;
+  margin-top: 0px;
   max-width: 300px;
 }
 
 .cover::after {
   content: "";
   border: 2px solid var(--sky-blue);
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 100%;
   top: 20px;
@@ -228,21 +264,144 @@ p {
 }
 
 .work-experience {
-  position: absolute;
-  top: 195%;
-  left: 35%;
-  display: inline-block;
+  position: relative;
+  margin-top: 200px;
+  padding-top: 100px;
+  padding-left: 600px;
+}
+
+.work-experience > h2::before {
+  content: '02. ';
+
+}
+
+.work-experience > .inner {
+  min-height: 250px;
+  min-height: 450px;
 }
 
 .inner > ul {
+  position: absolute;
+  left: 0px;
   list-style: none;
   z-index: 3;
+  max-width: fit-content;
+
 }
 
-.moving-btn {
+.movingBtn {
   background: transparent;
+  border: none;
+  padding: 20px 5px;
+  cursor: pointer;
+  width: 200px;
 }
 
-/* h1, h2, h3, p {
-  color: beige;
-} */
+.movingBtn > span {
+  background: transparent;
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--coral);
+}
+
+.movingBtn:hover {
+  background: rgb(58, 13, 58);
+}
+
+.work-panel {
+  position: absolute;
+  margin-left: 400px;
+  top: 200px;
+  bottom: 20px;
+  min-width: 400px;
+  min-height: 200px;
+}
+
+.achivPanel {
+  position: absolute;
+  top: 10px;
+  min-height: 300px;
+  width: 400px;
+}
+
+.achivPanel > h3 {
+  position: absolute;
+  left: 20px;
+}
+
+.achivPanel > p {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+
+.achivPanel > ul {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+
+.achivPanel > ul > li {
+  font-size: 20px;
+}
+
+.achievements {
+  margin-top: 110px;
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+.projects > h2::before {
+  content: '03. ';
+  color: var(--coral);
+} 
+
+.projects > h2 {
+  font-size: 36px;
+  color: var(--sky-blue);
+  position: relative;
+  display: inline-block;
+}
+
+.projects {
+  position: relative;
+  padding-top: 200px;
+  padding-left: 600px;
+  height: auto;
+}
+
+.project-1 {
+  display: grid;
+}
+
+.featured-style-project {
+  position: relative;
+  margin-right: 200px;
+  display: inline-block;
+  top: 100px;
+  /* height: 400px; */
+  width: auto;
+  /* height: auto; */
+}
+
+.project-description > p {
+  color: yellow;
+}
+
+.project-image {
+  /* position: absolute;
+  top: 0%;
+  right: 0%; */
+  /* left: 0; */
+  position: relative;
+  margin-right: 400px;
+  padding-right: 40%;
+  padding-bottom: 300px;
+  /* height: 400px;
+  width: 400px; */
+  /* min-height: 600px;
+  min-width: 400px; */
+}

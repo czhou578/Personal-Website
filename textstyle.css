@@ -1,0 +1,10 @@
+.div-first {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+.div-first span {
+  position: absolute;
+  
+}
