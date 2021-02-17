@@ -15,4 +15,13 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
   })
 }
 
-var hiddenPic = document.querySelector()
+// $("#hiddenFirst").hide();
+// setInterval(function() {
+//   $(".project-image-slideshow")
+//     .fadeOut(2000)
+//     .next()
+//     .fadeOut(2000)
+//     .next()
+//     .end()
+//     .appendTo(".project-image-slideshow")
+// }, 4000)
