@@ -7,10 +7,6 @@ html, body {
   margin: 0;
 }
 
-.start-1 {
-  position: relative;
-}
-
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -27,6 +23,23 @@ html, body {
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
+.left-bar-icons {
+  position: absolute;
+  left: 10px;
+  top: 15%;
+}
+
+.left-bar-icons > ul {
+  width: 40px;
+  height: 40px;
+  list-style: none;
+  padding: 20px;
+}
+
+.left-bar-icons svg {
+  height: 50px;
+  width: 50px;
+}
 
 .taskbar > li {
   display: inline;
@@ -34,7 +47,7 @@ html, body {
   margin: 35px;
 }
 
-li > a::before {
+.taskbar > li > a::before {
   counter-increment: item;
   content: "0" counter(item) ".  ";
   color: var(--coral);
@@ -54,15 +67,11 @@ li > a {
 
 a:link {
   text-decoration: none;
+  font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
 li > a:hover {
   color: lightskyblue !important;
-}
-
-object {
-  height: 75px;
-  width: 75px;
 }
 
 .resume-button {
@@ -73,16 +82,6 @@ object {
   border: 1px solid var(--green);
 }
 
-.resume-button > a {
-  color: var(--green);
-}
-
-.intro {
-  position: relative;
-  height: 700px;
-  width: 700px;
-}
-
 .intro-section { /*this one*/
   display: flex;
   flex-direction: column;
@@ -90,12 +89,12 @@ object {
   align-items: flex-start;
   position: relative;
   margin-top: 100px;
+  max-width: 100%;
+  
 }
 
 .paragraph-intro {
-  margin-left: 30%;
-  margin-top: 10px;
-
+  margin: 10px 0px 0px 30%;
 }
 
 .paragraph-intro > h1 {
@@ -105,13 +104,11 @@ object {
   font-weight: 400;
   color: var(--sky-blue);
   max-width: 500px;
-
 }
 
 .paragraph-intro > h2 {
   color: var(--sky-blue);
   font-size: 80px;
-
 }
 
 .paragraph-intro > h3 {
@@ -119,8 +116,9 @@ object {
   font-size: 80px;
 }
 
+
 p {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .paragraph-intro > h3, p {
@@ -143,19 +141,11 @@ p {
 
 }
 
-.profile-pic {
-  min-height: 250px;
-  min-width: 250px;
-
-}
-
 .profile {
   position: relative;
-  margin-top: 400px;
-  padding-top: 5%;
-  margin-left: 620px;
   max-width: 1000px;
   max-height: 1000px;
+  margin: 400px 0px 0px 620px;
 }
 
 .numbered-heading::before {
@@ -166,9 +156,11 @@ p {
 
 .numbered-heading {
   position: relative;
+  display: inline-block;
   top: 0;
   color: var(--sky-blue);
-  font-size: 36px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .numbered-heading::after {
@@ -189,19 +181,20 @@ p {
 
 .block-of-paragraphs > div {
   margin-top: 40px;
-  padding-right: 200px;
-}
-
-.inner-paragraph-contain {
-  position: relative;
+  /* padding-right: 200px; */
 }
 
 .list-wrap {
   position: relative;
-  padding-top: 10px;
-  min-width: 300px;
-  min-height: 250px;
-}
+  padding-top: 20px;
+  /* display: inline-block;
+  height: fit-content;
+  width: fit-content; */
+  /* max-height: fit-content; */
+  /* margin: auto; */
+  max-width: 300px;
+  min-height: 150px;
+} 
 
 .skills-list {
   position: absolute;
@@ -210,7 +203,6 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
   list-style: none;
-
 }
 
 .inner {
@@ -234,7 +226,7 @@ p {
 
 .cover {
   position: absolute;
-  margin-top: 25px;
+  margin-right: 40px;
   padding-top: 35px;
 }
 
@@ -246,9 +238,8 @@ p {
 
 .profile-pic {
   position: absolute;
-  top: 1%;
-  left: 80%;
-  margin-top: 0px;
+  top: 50%;
+  left: 65%;
   max-width: 300px;
 }
 
@@ -265,14 +256,11 @@ p {
 
 .work-experience {
   position: relative;
-  margin-top: 200px;
-  padding-top: 100px;
-  padding-left: 600px;
+  padding: 100px 0px 0px 600px;
 }
 
 .work-experience > h2::before {
   content: '02. ';
-
 }
 
 .work-experience > .inner {
@@ -322,6 +310,7 @@ p {
   top: 10px;
   min-height: 300px;
   width: 400px;
+  font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
 
 .achivPanel > h3 {
@@ -332,7 +321,7 @@ p {
 .achivPanel > p {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 50px;
 }
 
 .achivPanel > ul {
@@ -347,11 +336,10 @@ p {
 
 .achievements {
   margin-top: 110px;
-  color: white;
 }
 
-h3 {
-  color: white;
+h3, .achievements {
+  color: hsl(201, 79%, 60%);
 }
 
 .projects > h2::before {
@@ -364,24 +352,25 @@ h3 {
   height: auto;
   width: auto;
   padding-right: 20px;
-  order: 2;
+}
+
+.project-name > p {
+  color: rgb(224, 111, 209);
 }
 
 .projects > h2 {
-  /* position: absolute; */
-  font-size: 36px;
+  font-size: 30px;
   color: var(--sky-blue);
   display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .projects {
-  /* display: inline-block; */
   position: relative;
-  padding-top: 200px;
-  padding-left: 450px;
+  padding: 200px 0px 0px 450px;
 }
 
-.project-1, #project-3{
+.project-1, #project-3, #project-2 {
   margin-top: 50px;
   display: grid;
   grid-auto-flow: column; 
@@ -389,25 +378,8 @@ h3 {
   gap: 70px;
 }
 
-#project-2 {
-  margin-top: 100px;
-  display: grid;
-  grid-auto-flow: column; 
-  grid-template-columns: 400px 600px;
-  gap: 70px;
-}
-
-#description-2 {
-  order: 0;
-}
-
-#project-2 ~ img {
-  order: 2;
-}
-
-.project-image {
-  grid-column: 2;
-  order: 2;
+#project-3 {
+  margin-top: 75px;
 }
 
 .featured-style-project {
@@ -415,9 +387,7 @@ h3 {
   margin-right: 200px;
   display: inline-block;
   top: 100px;
-  /* height: 400px; */
   width: auto;
-  /* height: auto; */
 }
 
 .project-description {
@@ -426,12 +396,61 @@ h3 {
   max-height: 200px;
   margin-top: 100px;
   padding-left: 10px;
-  order: 1;
 }
-
 
 .project-description > p {
-  color: yellow;
+  color: rgb(99, 235, 106);
 }
+
+.contact {
+  padding: 250px;
+    position: relative;
+}
+
+.contact > h1 {
+  color: var(--sky-blue);
+  margin-left: 40%;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+}
+
+.contact > h1::before {
+  content: "04. ";
+  color: var(--coral);
+  font-size: 36px;
+}
+
+.contact > div {
+  display: block;
+  max-width: 500px;
+  margin: 80px 0px 0px 40%;
+}
+
+.button-wrapper > button {
+  color: var(--coral);
+  padding: 1.25rem 1.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--coral);
+  background-color: transparent;
+  font-size: var(--fz-sm);
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.short-description, .salutation {
+  font-size: 20px;
+}
+
+.inner-paragraph-contain p {
+  font-size: 20px;
+}
+
+.achivPanel p {
+  font-size: 20px;
+}
+
+
 
 
