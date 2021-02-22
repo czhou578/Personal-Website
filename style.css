@@ -23,23 +23,6 @@ html, body {
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
-.left-bar-icons {
-  position: absolute;
-  left: 10px;
-  top: 15%;
-}
-
-.left-bar-icons > ul {
-  width: 40px;
-  height: 40px;
-  list-style: none;
-  padding: 20px;
-}
-
-.left-bar-icons svg {
-  height: 50px;
-  width: 50px;
-}
 
 .taskbar > li {
   display: inline;
@@ -51,10 +34,10 @@ html, body {
   counter-increment: item;
   content: "0" counter(item) ".  ";
   color: var(--coral);
-
+  
 }
 
-ul {
+.taskbar {
   position: absolute;
   left: 55%;
   top: 0.4%;
@@ -63,15 +46,50 @@ ul {
 
 li > a {
   color: #ccd6f6 !important;
+  cursor: pointer;
+}
+
+.left-bar-icons {
+  position: fixed;
+  left: 10px;
+  top: 55%;
+  width: 90px;
+}
+
+ul > a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.left-bar-icons > ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  -webkit-box-align: center;
+}
+
+.left-bar-icons svg {
+  position: relative;
+  left: 0px;
+  height: 30px;
+  width: 30px;
+  margin-top: 50px;
+  cursor: pointer;
 }
 
 a:link {
   text-decoration: none;
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  cursor: pointer;
 }
 
 li > a:hover {
   color: lightskyblue !important;
+  cursor: pointer;
 }
 
 .resume-button {
@@ -321,7 +339,7 @@ p {
 .achivPanel > p {
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 56px;
 }
 
 .achivPanel > ul {
@@ -338,7 +356,12 @@ p {
   margin-top: 110px;
 }
 
-h3, .achievements {
+h3 {
+  color: aqua;
+
+}
+
+.achievements {
   color: hsl(201, 79%, 60%);
 }
 
@@ -380,6 +403,18 @@ h3, .achievements {
 
 #project-3 {
   margin-top: 75px;
+}
+
+.projects ul {
+  margin-top: 50px;
+  font-size: 15px;
+  list-style: none;
+  color: lightpink;
+}
+
+.projects ul > li {
+  display: inline;
+  margin-right: 40px;
 }
 
 .featured-style-project {
