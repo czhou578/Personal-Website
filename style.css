@@ -5,6 +5,8 @@ html, body {
   counter-reset: item;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *, ::before, ::after {
@@ -23,6 +25,29 @@ html, body {
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0px 25px;
+}
+
+.top-content { /*outer div*/
+  position: relative;
+  margin-top: 1%;
+  margin-left: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 1800px){
+  .taskbar  {
+    display: inline;
+    white-space: nowrap;
+  }  
+}
 
 .taskbar > li {
   display: inline;
@@ -37,22 +62,16 @@ html, body {
   
 }
 
-.taskbar {
-  position: absolute;
-  left: 55%;
-  top: 0.4%;
-  padding-left: 35px;
-}
+
 
 li > a {
   color: #ccd6f6 !important;
-  cursor: pointer;
 }
 
 .left-bar-icons {
   position: fixed;
   left: 10px;
-  top: 55%;
+  top: 45%;
   width: 90px;
 }
 
@@ -72,42 +91,49 @@ ul > a {
   -webkit-box-align: center;
 }
 
-.left-bar-icons svg {
-  position: relative;
-  left: 0px;
-  height: 30px;
-  width: 30px;
-  margin-top: 50px;
+#test-1 {
   cursor: pointer;
 }
 
+.left-bar-icons a {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.left-bar-icons > li {
+  cursor: pointer;
+}
+
+.left-bar-icons img {
+  position: relative;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  margin-top: 50px;
+}
+
 a:link {
+  position: relative;
+  left: 50px;
   text-decoration: none;
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-  cursor: pointer;
 }
 
 li > a:hover {
   color: lightskyblue !important;
-  cursor: pointer;
-}
-
-.resume-button {
-  position: absolute;
-  left: 90%;
-  top: 15px;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--green);
 }
 
 .intro-section { /*this one*/
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   margin-top: 100px;
-  max-width: 100%;
+  min-width: 100vh;
   
 }
 
@@ -127,13 +153,14 @@ li > a:hover {
 .paragraph-intro > h2 {
   color: var(--sky-blue);
   font-size: 80px;
+  font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
 
 .paragraph-intro > h3 {
   margin-block-start: 25px;
   font-size: 80px;
+  font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
-
 
 p {
   font-size: 30px;
@@ -205,11 +232,6 @@ p {
 .list-wrap {
   position: relative;
   padding-top: 20px;
-  /* display: inline-block;
-  height: fit-content;
-  width: fit-content; */
-  /* max-height: fit-content; */
-  /* margin: auto; */
   max-width: 300px;
   min-height: 150px;
 } 
@@ -274,6 +296,7 @@ p {
 
 .work-experience {
   position: relative;
+  margin-top: 200px;
   padding: 100px 0px 0px 600px;
 }
 
@@ -301,6 +324,8 @@ p {
   padding: 20px 5px;
   cursor: pointer;
   width: 200px;
+  border-radius: 10px;
+  outline: none;
 }
 
 .movingBtn > span {
@@ -311,7 +336,7 @@ p {
 }
 
 .movingBtn:hover {
-  background: rgb(58, 13, 58);
+  background-color: rgb(58, 13, 58);
 }
 
 .work-panel {
@@ -378,7 +403,8 @@ h3 {
 }
 
 .project-name > p {
-  color: rgb(224, 111, 209);
+  color: rgb(242, 235, 243);
+  font-size: 1.75rem;
 }
 
 .projects > h2 {
@@ -434,12 +460,14 @@ h3 {
 }
 
 .project-description > p {
-  color: rgb(99, 235, 106);
+  color: rgb(178, 98, 209);
+  font-family: roboto,sans-serif;
 }
 
 .contact {
+  margin-right: 15%;
   padding: 250px;
-    position: relative;
+  position: relative;
 }
 
 .contact > h1 {
@@ -475,7 +503,7 @@ h3 {
 }
 
 .short-description, .salutation {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .inner-paragraph-contain p {
@@ -485,6 +513,15 @@ h3 {
 .achivPanel p {
   font-size: 20px;
 }
+
+.resume-button { /*resume button*/
+  position: relative;
+  margin-top: 1%;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid var(--green);
+
+}
+
 
 
 

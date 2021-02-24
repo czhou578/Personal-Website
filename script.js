@@ -8,7 +8,9 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
   firstClick = true;
   movingBtn[i].addEventListener('click', function() {
     listOfPanels[i].removeAttribute("hidden");
+
     movingBtn[i].style.backgroundColor = 'darkGreen';
+    // movingBtn[i].setAttribute('style', 'backgroundColor: darkGreen !important');
     for (let j = 0; j < movingBtn.length; j++) {
       if (j != i) {
         listOfPanels[j].setAttribute("hidden", "true");
