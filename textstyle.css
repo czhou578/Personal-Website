@@ -1,10 +1,50 @@
-.div-first {
-  position: relative;
-  height: fit-content;
-  width: fit-content;
+.outer-wrap {
+  display: inline-block; /*displays right*/
 }
 
-.div-first span {
-  position: absolute;
-  
+.div-1 {
+  width: max-content; /*works same as fit-content*/
+  /* display: inline-block; -works*/
+}
+
+.demo-p {
+  /* margin-left: 200px; */
+  /* padding-left: 200px; */
+}
+
+.demo-list {
+  display: inline-block;
+}
+
+.demo-section {
+  margin-top: 20px;
+  padding: 10px 10px 0px 0px;
+  display: inline-block;
+}
+
+.hello {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  margin-top: 200px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.position-ul {
+  margin: auto;
+  display: inline;
+  order: 0;
+}
+
+.position-ul > li {
+  display: inline;
+}
+
+.nested {
+  padding: 20px;
+  display: inline-block;
+  order: 1;
 }
