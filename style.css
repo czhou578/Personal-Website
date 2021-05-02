@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html, body {
   position: relative;
@@ -22,7 +23,7 @@ html, body {
   --fz-sm: 20px;
   --fz-lg: 18px;
   --border-radius: 4px;
-  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --font-mono: 'Open Sans', sans-serif;
 }
 
 .container-fluid {
@@ -163,7 +164,8 @@ li > a:hover {
 }
 
 p {
-  font-size: 30px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .paragraph-intro > h3, p {
@@ -272,6 +274,8 @@ p {
 
 .cover > img {
   position: relative;
+  top: 10px;
+  left: 50px;
   height: 100%;
   width: 100%;
 }
@@ -419,7 +423,7 @@ h3 {
   padding: 200px 0px 0px 450px;
 }
 
-.project-1, #project-3, #project-2 {
+.project-1, #project-3, #project-2, #project-4 {
   margin-top: 50px;
   display: grid;
   grid-auto-flow: column; 
