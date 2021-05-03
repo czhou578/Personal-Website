@@ -18,7 +18,9 @@ html, body {
   --green: #64ffda;
   --sky-blue: #95d1e0;
   --slate: #8892b0;
+  --light-blue: #86c6eb;
   --lightest-slate: #ccd6f6;
+  --aqua: #00ffff;
   --coral:#f08080;
   --fz-sm: 20px;
   --fz-lg: 18px;
@@ -169,30 +171,39 @@ p {
 }
 
 .paragraph-intro > h3, p {
-  color: var(--slate);
+  color: var(--light-blue);
 }
 
 .get-in-touch > a {
+  color: var(--coral);
+  margin-right: 100px;
+}
+
+.get-in-touch > a:hover {
   color: var(--coral);
 }
 
 .get-in-touch {
   margin-top: 100px;
   margin-left: 30%;
-  padding: 1.25rem 1.75rem;
+  padding: 1.25rem 1.25rem;
   border: 1px solid lightcoral;
   cursor: pointer;
   text-decoration: none;
   border-radius: var(--border-radius);
   font-size: var(--fz-sm);
+  transition-duration: 0.4s;
+}
 
+.get-in-touch:hover {
+  background: rgb(240, 128, 128, 0.3);
 }
 
 .profile {
   position: relative;
   max-width: 1000px;
   max-height: 1000px;
-  margin: 400px 0px 0px 620px;
+  margin: 400px 0px 0px 520px;
 }
 
 .numbered-heading::before {
@@ -205,7 +216,7 @@ p {
   position: relative;
   display: inline-block;
   top: 0;
-  color: var(--sky-blue);
+  color: var(--aqua);
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -413,7 +424,7 @@ h3 {
 
 .projects > h2 {
   font-size: 30px;
-  color: var(--sky-blue);
+  color: var(--aqua);
   display: inline-block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -423,7 +434,7 @@ h3 {
   padding: 200px 0px 0px 450px;
 }
 
-.project-1, #project-3, #project-2, #project-4 {
+.project-1, #project-3, #project-2, #project-4, #project-5 {
   margin-top: 50px;
   display: grid;
   grid-auto-flow: column; 
@@ -435,11 +446,21 @@ h3 {
   margin-top: 75px;
 }
 
+#project-4 {
+  margin-top: 120px;
+}
+
 .projects ul {
   margin-top: 50px;
   font-size: 15px;
   list-style: none;
   color: lightpink;
+  white-space: nowrap;
+}
+
+#project-5-skills {
+  position: relative;
+  right: 50px;
 }
 
 .projects ul > li {
@@ -475,7 +496,7 @@ h3 {
 }
 
 .contact > h1 {
-  color: var(--sky-blue);
+  color: var(--aqua);
   margin-left: 40%;
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -504,6 +525,11 @@ h3 {
   margin-top: 20px;
   position: relative;
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.button-wrapper > button:hover {
+  background-color: rgb(240, 128, 128, 0.3);
 }
 
 .short-description, .salutation {
@@ -521,9 +547,17 @@ h3 {
 .resume-button { /*resume button*/
   position: relative;
   margin-top: 1%;
-  padding: 1.25rem 1.75rem;
+  padding: 1.25rem 0rem;
   border: 1px solid var(--green);
+  font-size: var(--fz-sm);
+  width: 20%;
+  text-align: center;
+  transition: 0.4s;
+}
 
+.resume-button:hover {
+  cursor: pointer;
+  background-color: rgb(100, 255, 218, 0.3);
 }
 
 
