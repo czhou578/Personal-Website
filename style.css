@@ -560,6 +560,29 @@ h3 {
   background-color: rgb(100, 255, 218, 0.3);
 }
 
+.icons {
+  margin-left: 300px;
+}
+
+#connect-line {
+  --initialStroke: 0;
+  --transitionDuration: 0;
+  stroke-opacity: 1;
+  stroke-dasharray: var(--initialStroke);
+  stroke-dashoffset: var(--initialStroke);
+  transition: stroke-dashoffset var(--transitionDuration) ease;
+}
+
+/* @keyframes connectLine {
+  from {
+    fill: 0;
+  }
+
+  to {
+    fill: #00ffff;
+  }
+} */
+
 
 
 
