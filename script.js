@@ -22,11 +22,21 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
 
 const progressLine = document.querySelector('#connect-line')
 console.log(document.activeElement)
-if (isFocused) {
-  console.log('true')
-  progressLine.removeAttribute('fill')
-  progressLine.setAttribute('fill', 'url(#left-to-right)')
-}
+
+window.addEventListener("scroll", function(event) {
+  var top = this.scrollY,
+      left =this.scrollX;
+  if (top >= 533.5 && top <= 800) {
+    progressLine.removeAttribute('fill')
+    progressLine.setAttribute('fill', "url(#left-to-right)")
+  }
+  console.log(top)
+});
+// if (isFocused) {
+//   console.log('true')
+//   progressLine.removeAttribute('fill')
+//   progressLine.setAttribute('fill', 'url(#left-to-right)')
+// }
 
 
 
