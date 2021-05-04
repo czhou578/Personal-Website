@@ -203,7 +203,7 @@ p {
   position: relative;
   max-width: 1000px;
   max-height: 1000px;
-  margin: 400px 0px 0px 520px;
+  margin: 100px 0px 0px 520px;
 }
 
 .numbered-heading::before {
@@ -564,15 +564,13 @@ h3 {
   margin-left: 300px;
 }
 
-#connect-line {
-  --initialStroke: 0;
-  --transitionDuration: 0;
-  stroke-opacity: 1;
-  stroke-dasharray: var(--initialStroke);
-  stroke-dashoffset: var(--initialStroke);
-  transition: stroke-dashoffset var(--transitionDuration) ease;
-}
+/* #connect-line {
+  animation-play-state: paused;
+} */
 
+svg:focus #connect-line {
+  animation-play-state: running;
+}
 /* @keyframes connectLine {
   from {
     fill: 0;

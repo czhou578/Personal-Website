@@ -10,7 +10,6 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
     listOfPanels[i].removeAttribute("hidden");
 
     movingBtn[i].style.backgroundColor = 'darkGreen';
-    // movingBtn[i].setAttribute('style', 'backgroundColor: darkGreen !important');
     for (let j = 0; j < movingBtn.length; j++) {
       if (j != i) {
         listOfPanels[j].setAttribute("hidden", "true");
@@ -20,4 +19,14 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
     }
   })
 }
+
+const progressLine = document.querySelector('#connect-line')
+console.log(document.activeElement)
+if (isFocused) {
+  console.log('true')
+  progressLine.removeAttribute('fill')
+  progressLine.setAttribute('fill', 'url(#left-to-right)')
+}
+
+
 
