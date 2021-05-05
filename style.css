@@ -202,7 +202,7 @@ p {
   position: relative;
   max-width: 1000px;
   max-height: 1000px;
-  margin: 200px 0px 0px 520px;
+  margin: 350px 0px 0px 520px;
 }
 
 .numbered-heading::before {
@@ -561,15 +561,50 @@ h3 {
 
 .icons {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: center;
   margin-left: 100px;
   margin-top: 200px;
   max-height: 800px;
 }
 
-.icons-1 {
+.icon-1, .icon-2 {
+  position: relative;
 }
+
+.icon-2 > svg {
+  margin-bottom: 50px;
+}
+
+.icon-1 > h2, .icon-2 > h2 {
+  position: absolute;
+  color: white;
+  display: inline-block;
+  font-size: 25px;
+  top: 100%;
+  right: 45%;
+}
+
+.icon-2 > h2 ~ p, .icon-1> h2 ~ p {
+  position: absolute;
+  color: white;
+  top: 110%;
+}
+
+.icon-1> h2 ~ p {
+  left: 100px;
+}
+
+/* .icon-2 > h2 {
+  position: absolute;
+  color: white;
+  display: inline-block;
+  font-size: 25px;
+
+} */
+
+
+
+
 
 svg:focus #connect-line {
   animation-play-state: running;

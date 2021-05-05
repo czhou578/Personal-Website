@@ -23,20 +23,18 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
 }
 
 const progressLine = document.querySelector('#connect-line')
-console.log(progressLine)
 
 window.addEventListener("scroll", function(event) {
   var top = this.scrollY,
-      left =this.scrollX;
+  left =this.scrollX;
   if (top >= 533.5 && top <= 800) {
-    progressLine.removeAttribute('fill')
-    progressLine.setAttribute('fill', "url(#left-to-right)")
+    progressLine.setAttribute('fill', "url(#right)")
   }
 });
 
 gsap.registerPlugin(MotionPathPlugin);
 
-MotionPathPlugin.convertToPath('ellipse, line')
+MotionPathPlugin.convertToPath('ellipse')
 
 gsap.to('#ellipse', {
   motionPath: {
