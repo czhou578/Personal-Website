@@ -23,6 +23,7 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
 }
 
 const progressLine = document.querySelector('#connect-line')
+console.log(progressLine)
 
 window.addEventListener("scroll", function(event) {
   var top = this.scrollY,

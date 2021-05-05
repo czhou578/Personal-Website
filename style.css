@@ -137,7 +137,6 @@ li > a:hover {
   position: relative;
   margin-top: 100px;
   min-width: 100vh;
-  
 }
 
 .paragraph-intro {
@@ -203,7 +202,7 @@ p {
   position: relative;
   max-width: 1000px;
   max-height: 1000px;
-  margin: 100px 0px 0px 520px;
+  margin: 200px 0px 0px 520px;
 }
 
 .numbered-heading::before {
@@ -561,25 +560,20 @@ h3 {
 }
 
 .icons {
-  margin-left: 300px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 200px;
+  max-height: 800px;
 }
 
-/* #connect-line {
-  animation-play-state: paused;
-} */
+.icons-1 {
+}
 
 svg:focus #connect-line {
   animation-play-state: running;
 }
-/* @keyframes connectLine {
-  from {
-    fill: 0;
-  }
-
-  to {
-    fill: #00ffff;
-  }
-} */
 
 
 
