@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 
 html, body {
   position: relative;
@@ -582,6 +584,8 @@ h3 {
   font-size: 25px;
   top: 100%;
   right: 45%;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
 }
 
 .icon-2 > h2 ~ p, .icon-1> h2 ~ p {
@@ -590,25 +594,12 @@ h3 {
   top: 110%;
 }
 
-.icon-1> h2 ~ p {
+.icon-1 > h2 ~ p {
   left: 100px;
 }
 
-/* .icon-2 > h2 {
-  position: absolute;
-  color: white;
-  display: inline-block;
-  font-size: 25px;
-
-} */
 
 
-
-
-
-svg:focus #connect-line {
-  animation-play-state: running;
-}
 
 
 
