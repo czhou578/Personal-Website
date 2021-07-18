@@ -9,6 +9,7 @@ let firstClick = false;
 for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel gets hidden
   firstClick = true;
   movingBtn[i].addEventListener('click', function() {
+    console.log('hellow')
     listOfPanels[i].removeAttribute("hidden");
 
     movingBtn[i].style.backgroundColor = 'darkGreen';
