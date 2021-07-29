@@ -18,9 +18,9 @@ html, body {
 
 :root {
   --green: #64ffda;
-  --sky-blue: #95d1e0;
+  --sky-blue: #cceef7;
   --slate: #8892b0;
-  --light-blue: #86c6eb;
+  --light-blue: #4897c9;
   --lightest-slate: #ccd6f6;
   --aqua: #00ffff;
   --coral:#f08080;
@@ -215,9 +215,9 @@ p {
 
 .numbered-heading {
   position: relative;
-  display: inline-block;
+  display: inline-block;  
   top: 0;
-  color: var(--aqua);
+  color: var(--sky-blue);
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -398,12 +398,12 @@ p {
 }
 
 h3 {
-  color: aqua;
+  color: var(--sky-blue);
 
 }
 
 .achievements {
-  color: hsl(201, 79%, 60%);
+  color: var(--light-blue);
 }
 
 .projects > h2::before {
@@ -425,14 +425,14 @@ h3 {
 
 .projects > h2 {
   font-size: 30px;
-  color: var(--aqua);
+  color: var(--sky-blue);
   display: inline-block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .projects {
   position: relative;
-  padding: 200px 0px 0px 450px;
+  padding: 200px 0px 0px 550px;
 }
 
 .project-1, #project-3, #project-2, #project-4, #project-5 {
@@ -486,7 +486,7 @@ h3 {
 }
 
 .project-description > p {
-  color: rgb(178, 98, 209);
+  color: var(--light-blue);
   font-family: roboto,sans-serif;
 }
 
@@ -497,7 +497,7 @@ h3 {
 }
 
 .contact > h1 {
-  color: var(--aqua);
+  color: var(--sky-blue);
   margin-left: 40%;
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -549,7 +549,7 @@ h3 {
   position: relative;
   margin-top: 1%;
   padding: 1.25rem 0rem;
-  border: 1px solid var(--green);
+  border: 1px solid var(--coral);
   font-size: var(--fz-sm);
   width: 20%;
   text-align: center;
