@@ -67,56 +67,35 @@ html, body {
   
 }
 
-
-
-li > a {
-  color: #ccd6f6 !important;
-}
-
 .left-bar-icons {
   position: fixed;
-  left: 10px;
   top: 45%;
-  width: 90px;
-}
-
-ul > a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-}
-
-.left-bar-icons > ul {
-  position: relative;
+  left: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999;
+}
+
+ul > a {
+  color: white;
+}
+
+.left-bar-icons > ul li {
   list-style: none;
-  -webkit-box-align: center;
 }
 
-#test-1 {
-  cursor: pointer;
-}
-
-.left-bar-icons a {
-  height: 50px;
-  width: 50px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.left-bar-icons > li {
-  cursor: pointer;
+#link-1, #link-2, #link-3, #link-4 {
+  height: 50px !important;
+  left: 0px;
 }
 
 .left-bar-icons img {
-  position: relative;
   object-fit: cover;
   height: 50px;
   width: 50px;
   margin-top: 50px;
+  z-index: 999;
 }
 
 a:link {
@@ -124,6 +103,10 @@ a:link {
   left: 50px;
   text-decoration: none;
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
+
+li > a {
+  color: #ccd6f6 !important;
 }
 
 li > a:hover {
