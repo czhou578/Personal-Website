@@ -424,7 +424,7 @@ h3 {
   padding: 200px 0px 0px 550px;
 }
 
-.project-1, #project-3, #project-2, #project-4, #project-5 {
+.project-1, #project-3, #project-2, #project-4, #project-5, #project-6 {
   margin-top: 50px;
   display: grid;
   grid-auto-flow: column; 
@@ -432,7 +432,7 @@ h3 {
   gap: 70px;
 }
 
-#project-3 {
+#project-3, #project-6 {
   margin-top: 75px;
 }
 
