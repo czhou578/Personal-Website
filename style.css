@@ -244,7 +244,7 @@ p {
   margin-top: 20px;
   left: 10px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-template-columns: repeat(2, minmax(180px, 200px));
   list-style: none;
 }
 
@@ -424,20 +424,30 @@ h3 {
   padding: 200px 0px 0px 550px;
 }
 
-.project-1, #project-3, #project-2, #project-4, #project-5, #project-6 {
+.project-1, #project-3, #project-2, #project-4, #project-5, #project-6, #project-7 {
   margin-top: 50px;
-  display: grid;
   grid-auto-flow: column; 
+  display: grid;
   grid-template-columns: 600px 400px;
   gap: 70px;
 }
 
-#project-3, #project-6 {
+#project-3 {
   margin-top: 75px;
+}
+
+#project-6 {
+  margin-top: 120px;
 }
 
 #project-4 {
   margin-top: 120px;
+}
+
+.futurism img {
+  height: 337px;
+  width: 600px;
+  object-fit: cover;
 }
 
 .projects ul {
