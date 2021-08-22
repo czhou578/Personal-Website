@@ -40,13 +40,14 @@ setTimeout(function() {
       end: 0,
       align: "#path",
       alignOrigin: [0.5, 0.5],
-      fill: "4DAF4C"
+      fill: "4DAF4C",
     },
     duration: 7,
-    ease: "power1.inOut"
+    ease: "power1.inOut",
+    repeat: -1
   })
 
-}, 5500)
+}, 100)
 
 
 
