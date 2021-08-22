@@ -23,30 +23,31 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
 
 const progressLine = document.querySelector('#connect-line')
 
-window.addEventListener("scroll", function(event) {
-  var top = this.scrollY,
-  left =this.scrollX;
-  if (top >= 533.5 && top <= 800) {
-    progressLine.setAttribute('fill', "url(#right)")
-  }
-});
+setTimeout(function() {
+  progressLine.setAttribute('fill', "url(#right)")
+  
+}, 1000)
 
 gsap.registerPlugin(MotionPathPlugin);
 
 MotionPathPlugin.convertToPath('ellipse')
 
-gsap.to('#ellipse', {
-  motionPath: {
-    path: "#path",
-    start: 1,
-    end: 0,
-    align: "#path",
-    alignOrigin: [0.5, 0.5],
-    fill: "4DAF4C"
-  },
-  duration: 7,
-  ease: "power1.inOut"
-})
+setTimeout(function() {
+  gsap.to('#ellipse', {
+    motionPath: {
+      path: "#path",
+      start: 1,
+      end: 0,
+      align: "#path",
+      alignOrigin: [0.5, 0.5],
+      fill: "4DAF4C"
+    },
+    duration: 7,
+    ease: "power1.inOut"
+  })
+
+}, 5500)
+
 
 
 
