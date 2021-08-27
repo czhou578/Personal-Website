@@ -383,13 +383,18 @@ p {
   font-size: 20px;
 }
 
+#gitlink {
+  display: inline-block;
+  margin-right: 30px;
+  color: white;
+}
+
 .achievements {
   margin-top: 110px;
 }
 
 h3 {
   color: var(--sky-blue);
-
 }
 
 .achievements {
@@ -450,10 +455,6 @@ h3 {
   width: 600px;
   object-fit: cover;
 }
-
-/* .project-name {
-  border: 2px solid coral;
-} */
 
 .project-image img, .hiddenFirst img {
   border-radius: 5px;
