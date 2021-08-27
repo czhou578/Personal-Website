@@ -264,7 +264,7 @@ p {
 }
 
 .skills-list > li {
-  color: var(--slate);
+  color: var(--lightest-slate);
   margin-top: 10px;
 }
 
@@ -451,8 +451,13 @@ h3 {
   object-fit: cover;
 }
 
-.project-image img {
+/* .project-name {
+  border: 2px solid coral;
+} */
+
+.project-image img, .hiddenFirst img {
   border-radius: 5px;
+  border: 5px solid lightblue;
 }
 
 .projects ul {
