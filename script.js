@@ -1,7 +1,7 @@
 
 
 var movingBtn = document.querySelectorAll('.movingBtn');
-movingBtn[0].style.backgroundColor = "#FFDAB9";
+movingBtn[0].style.backgroundColor = "#782323";
 var listOfPanels = document.querySelectorAll('.achivPanel');
 
 let firstClick = false;
@@ -10,7 +10,7 @@ for (let i = 0; i < movingBtn.length; i++) { //initial click, the first panel ge
   movingBtn[i].addEventListener('click', function() {
     listOfPanels[i].removeAttribute("hidden");
 
-    movingBtn[i].style.backgroundColor = '#FFDAB9';
+    movingBtn[i].style.backgroundColor = '#782323';
     for (let j = 0; j < movingBtn.length; j++) {
       if (j != i) {
         listOfPanels[j].setAttribute("hidden", "true");
