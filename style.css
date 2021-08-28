@@ -156,9 +156,15 @@ li > a:hover {
   font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 }
 
-p {
+#description-pre, p {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+  color: var(--light-blue);
+
+}
+
+pre {
+  margin-left: -130px;
 }
 
 .paragraph-intro > h3, p {
