@@ -182,8 +182,8 @@ pre {
 
 .get-in-touch {
   margin-top: 100px;
-  margin-left: 30%;
-  padding: 1.25rem 1.25rem;
+  /* margin-left: 30%; */
+  padding: 1.2rem;
   border: 1px solid lightcoral;
   cursor: pointer;
   text-decoration: none;
